@@ -10,7 +10,11 @@
 		代数
 		第n个重名的人
 */
+#include <iostream>
+#include <vector>
+#include <string>
 
+using namespace std;
 class Person
 {
 public:
@@ -47,7 +51,12 @@ public:
 	//设置children
 	void setChildren(vector<Person*> children);
 
-	//答应处
+	//返回father
+	Person* getFather();
+	//设置father
+	void setFather(Person* father);
+
+	//打印成员信息
 	void printPerson();
 
 private:
@@ -57,6 +66,7 @@ private:
 	int DuplicationNumber; //第几个重名的人，默认为1
 	string spouse; //配偶的名字，初始化为“”
 	vector<Person*> children; //子女的指针容器
+	Person* father; //指向双亲的指针
 };
 
 

@@ -10,7 +10,7 @@ int main(){
 	int ope; //操作数
 
 	while (getOperation(ope) != -1) { //调用函数，得到ope值
-		if (isCreated || ope == 1) {
+		if (isCreated || ope == 1) { //若已创建家谱或正在创建家谱
 			switch(ope) {
 				case 1:	//创建家谱
 					UICreatGenealogy(isCreated);
@@ -42,6 +42,6 @@ int main(){
 
 	genealogy.writeFile();
 	endProgram();
-	
+
 	return 0;
 }
