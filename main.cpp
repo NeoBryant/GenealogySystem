@@ -12,6 +12,9 @@ int main(){
 	while (getOperation(ope) != -1) { //调用函数，得到ope值
 		if (isCreated || ope == 1) { //若已创建家谱或正在创建家谱
 			switch(ope) {
+				case 0: //查看菜单
+					menu();
+					break;
 				case 1:	//创建家谱
 					UICreatGenealogy(isCreated);
 					if (!isCreated) {

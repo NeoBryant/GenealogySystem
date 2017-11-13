@@ -9,6 +9,7 @@
 		结点指针容器
 		代数
 		第n个重名的人
+		指向父亲的指针
 */
 #include <iostream>
 #include <vector>
