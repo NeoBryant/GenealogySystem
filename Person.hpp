@@ -144,7 +144,7 @@ void Person::setFather(Person* _father){
 }
 
 //增加孩子成员
-void addChild(Person* child) {
+void Person::addChild(Person* child) {
 	children.push_back(child);
 }
 
