@@ -57,6 +57,9 @@ public:
 	//设置father
 	void setFather(Person* _father);
 
+	//增加孩子成员
+	void addChild(Person* child);
+
 	//打印成员信息
 	void printPerson();
 
@@ -70,8 +73,6 @@ private:
 	Person* father; //指向双亲的指针
 };
 
-
-#endif
 Person::Person(){
 	name = "";
 	gender = true;
@@ -142,6 +143,12 @@ void Person::setFather(Person* _father){
 	father = _father;
 }
 
+//增加孩子成员
+void addChild(Person* child) {
+	children.push_back(child);
+}
+
+
 void Person::printPerson(){
 	cout << "Generation" << generation << ": " << name;
 	cout << " Gender:";
@@ -149,3 +156,6 @@ void Person::printPerson(){
 	else cout << "F";
 	if(spouse != "") cout << " spouse:" << spouse;
 }
+
+
+#endif
